@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Angelic';
-    src: url('Angelic Bonques Sans Regular.otf') format('truetype');
+    src: url('assets/Angelic Bonques Sans Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,9 +43,9 @@ html, body { height: 100%; margin: 0; }
     background-position: 50% !important;
 }
 
-.slider .img:nth-of-type(1) { background: url("tee1.png"); }
-.slider .img:nth-of-type(2) { background: url("tee2.png"); }
-.slider .img:nth-of-type(3) { background: url("tee3.png"); }
+.slider .img:nth-of-type(1) { background: url("images/tee1.png"); }
+.slider .img:nth-of-type(2) { background: url("images/tee2.png"); }
+.slider .img:nth-of-type(3) { background: url("images/tee3.png"); }
 
 .slider .img span {
     padding: 7px 20px;
@@ -323,3 +323,119 @@ body {
     box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
 }
 
+.head-success {
+    width: 100vw;
+    background-color: white;
+    font-size: 2em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: Angelic, sans-serif;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    transition: width 0.3s ease;
+    z-index: 1000;
+}
+
+.thank--you {
+    font-family: "Roboto", sans-serif;
+    font-size: 1.2em;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 3em;
+    box-shadow: rgba(149, 157, 165, 0.2) 0 8px 24px;
+    margin-top: 7em;
+}
+
+.thank--you p {
+    font-weight: bolder;
+}
+
+.social {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    margin-top: 4em;
+}
+
+.social img {
+    width: 55px;
+    height: 55px;
+}
+
+.social button {
+    text-align: center;
+    cursor: pointer;
+    border-radius: 12px;
+    border: none;
+    box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
+    transition: ease-out 1s;
+    background-color: white;
+}
+
+.social button:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+}
+
+@media only screen and (max-width: 900px) {
+    .head {
+        font-size: 1em;
+    }
+    .main {
+        padding: 150px 0 0 0;
+        max-width: 100vw;
+        flex-direction: column;
+    }
+
+    .slider, .slider .imgs {
+       width: 100vw;
+       height: 50vh;
+    }
+
+    .slider .img .imgs {
+        height: 50%;
+    }
+
+    .text {
+        margin-top: 5em;
+        font-size: 1.2em;
+    }
+
+    .video, .video video {
+        height: 100em;
+        background-color: black;
+    }
+
+    .info {
+        text-align: center;
+        font-size: 1em;
+    }
+
+    .info button {
+        font-size: 24px;
+    }
+
+    .info button:after {
+        font-size: 1.3em;
+    }
+
+    .subscribe {
+        width: 99vw;
+        text-align: center;
+    }
+
+    .subscribe--box {
+        font-size: 20px;
+    }
+    .form__email {
+        width:200px;
+    }
+    .form__button {
+        padding: 1em;
+    }
+    span {
+        font-size: 12px;
+    }
+}
