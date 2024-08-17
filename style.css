@@ -418,8 +418,12 @@ body {
         pointer-events: none!important;
     }
 
+    source {
+        pointer-events: none!important;
+    }
+
     #myVideo {
-        pointer-events: none; 
+        pointer-events: none;
         user-select: none;
     }
 
