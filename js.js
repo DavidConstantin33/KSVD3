@@ -166,9 +166,9 @@ function updateVideoSource() {
     const videoSource = document.getElementById('vidSource');
 
     if (window.innerWidth <= 900) {
-        videoSource.src = 'assets/vid.mp4';
+        videoSource.src = 'vid.mp4';
     } else {
-        videoSource.src = 'assets/vid3.mp4';
+        videoSource.src = 'vid3.mp4';
     }
 
     video.load();
