@@ -2,7 +2,7 @@
 
 @font-face {
     font-family: 'Angelic';
-    src: url('assets/Angelic Bonques Sans Regular.otf') format('truetype');
+    src: url('Angelic Bonques Sans Regular.otf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -43,9 +43,9 @@ html, body { height: 100%; margin: 0; }
     background-position: 50% !important;
 }
 
-.slider .img:nth-of-type(1) { background: url("images/tee1.png"); }
-.slider .img:nth-of-type(2) { background: url("images/tee2.png"); }
-.slider .img:nth-of-type(3) { background: url("images/tee3.png"); }
+.slider .img:nth-of-type(1) { background: url("tee1.png"); }
+.slider .img:nth-of-type(2) { background: url("tee2.png"); }
+.slider .img:nth-of-type(3) { background: url("tee3.png"); }
 
 .slider .img span {
     padding: 7px 20px;
