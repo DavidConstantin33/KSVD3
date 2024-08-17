@@ -1,5 +1,3 @@
-
-
 const sliders = document.querySelectorAll(".slider");
 
     const interval = 2800;
@@ -75,41 +73,83 @@ const sliders = document.querySelectorAll(".slider");
         }
     }
 
-window.addEventListener('scroll', function() {
-    const header = document.getElementById('head');
-    const title = document.getElementById('title');
-    const scrollY = window.scrollY || window.pageYOffset;
-    const windowHeight = window.innerHeight;
+ if (window.innerWidth >= 900) {
+    window.addEventListener('scroll', function () {
+        const header = document.getElementById('head');
+        const title = document.getElementById('title');
+        const scrollY = window.scrollY || window.pageYOffset;
+        const windowHeight = window.innerHeight;
 
 
-    const maxScroll = windowHeight * 2;
+        const maxScroll = windowHeight * 2;
 
-    // Calculate the percentage of scroll
-    const scrollPercent = Math.min(scrollY / maxScroll, 1);
+        // Calculate the percentage of scroll
+        const scrollPercent = Math.min(scrollY / maxScroll, 1);
 
-    // Adjust header height and title font size based on scroll percentage
-    const headerHeight = 10 + (scrollPercent * (100 - 10)); // from 10vh to 100vh
-    const titleFontSize = 1 + (scrollPercent * (3 - 1)); // from 1em to 3em
+        // Adjust header height and title font size based on scroll percentage
+        const headerHeight = 10 + (scrollPercent * (100 - 10)); // from 10vh to 100vh
+        const titleFontSize = 1 + (scrollPercent * (3 - 1)); // from 1em to 3em
 
-    // Apply styles based on scroll percentage
-    header.style.height = headerHeight + 'vh';
-    title.style.fontSize = titleFontSize + 'em';
+        // Apply styles based on scroll percentage
+        header.style.height = headerHeight + 'vh';
+        title.style.fontSize = titleFontSize + 'em';
 
-    if (scrollY > maxScroll) {
-        header.style.height = '10vh';
-        title.style.fontSize = '2em';
-    }
+        if (scrollY > maxScroll) {
+            header.style.height = '10vh';
+            title.style.fontSize = '2em';
+        }
 
-    if (header.style.height >= '40%') {
-        header.style.opacity = '0.2';
-        title.style.color = 'black';
-    } else if (header.style.height <= '40%') {
-        header.style.opacity = '1';
-        header.padding = '1em';
-        title.style.color = 'black';
-        title.fontSize = '1em';
-    }
-});
+        if (header.style.height >= '40%') {
+            header.style.opacity = '0.2';
+            title.style.color = 'black';
+        } else if (header.style.height <= '40%') {
+            header.style.opacity = '1';
+            header.padding = '1em';
+            title.style.color = 'black';
+            title.fontSize = '1em';
+        }
+    });
+} else {
+     window.addEventListener('scroll', function () {
+         const header = document.getElementById('head');
+         const title = document.getElementById('title');
+         const scrollY = window.scrollY || window.pageYOffset;
+         const windowHeight = window.innerHeight;
+
+
+         if (window.screenY === 0) {
+             title.fontSize = '1em';
+         }
+
+         const maxScroll = windowHeight * 1.4;
+
+         const scrollPercent = Math.min(scrollY / maxScroll, 1);
+
+         const headerHeight = 10 + (scrollPercent * (100 - 10));
+         const titleFontSize = 0.5 + (scrollPercent * (3 - 1));
+
+         header.style.height = headerHeight + 'vh';
+         title.style.fontSize = titleFontSize + 'em';
+
+         if (scrollY > maxScroll) {
+             header.style.height = '10vh';
+             title.style.fontSize = '1.3em';
+         }
+
+
+
+         if (header.style.height >= '40%') {
+             header.style.opacity = '0.2';
+             title.style.color = 'black';
+         } else if (header.style.height <= '40%') {
+             header.style.opacity = '1';
+             header.padding = '1em';
+             title.style.color = 'black';
+             title.fontSize = '1em';
+         }
+ });
+ }
+
 
 const info = {
     heading1 : 'Who are we?',
