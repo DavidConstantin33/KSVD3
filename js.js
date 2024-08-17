@@ -224,3 +224,12 @@ btnform.addEventListener('click', function (e) {
     e.preventDefault();
     window.location.href = 'https://forms.gle/zUqTXVAX1hahzeHr9';
 })
+
+document.addEventListener('DOMContentLoaded', function() {
+    const videoElement = document.getElementById('vid');
+
+    if (window.innerWidth <= 767) { // Check if the device width is 767px or less
+        videoElement.removeAttribute('controls'); // Remove controls on mobile
+        videoElement.style.pointerEvents = 'none'; // Disable interaction
+    }
+});

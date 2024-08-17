@@ -418,6 +418,11 @@ body {
         pointer-events: none!important;
     }
 
+    #myVideo {
+        pointer-events: none; 
+        user-select: none;
+    }
+
     .info {
         text-align: center;
         font-size: 1em;
