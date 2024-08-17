@@ -161,4 +161,26 @@ document.getElementById('title').addEventListener('click', function() {
     });
 });
 
+function updateVideoSource() {
+    const video = document.getElementById('vid');
+    const videoSource = document.getElementById('vidSource');
 
+    if (window.innerWidth <= 900) {
+        videoSource.src = 'assets/vid.mp4';
+    } else {
+        videoSource.src = 'assets/vid3.mp4';
+    }
+
+    video.load();
+}
+
+
+updateVideoSource();
+
+window.addEventListener('resize', updateVideoSource);
+
+const btnform = document.getElementById('formular');
+btnform.addEventListener('click', function (e) {
+    e.preventDefault();
+    window.location.href = 'https://forms.gle/zUqTXVAX1hahzeHr9';
+})

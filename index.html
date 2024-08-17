@@ -38,8 +38,8 @@
 </div>
 
 <div class="video">
-    <video muted loop autoplay>
-        <source src="vid3.mp4">
+    <video id="vid" muted loop autoplay>
+        <source id="vidSource" src="assets/vid3.mp4">
     </video>
 </div>
 
@@ -56,24 +56,16 @@
 <div class="subscribe--box">
 <div class="subscribe">
     <h2 class="subscribe__title">Be the first to know the release date.</h2>
-    <p class="subscribe__copy">Subscribe to find out about our launch before everybody else.</p>
-    <div class="form">
-        <form action="/submit-email" method="POST">
-            <input type="email" class="form__email" name="email" placeholder="Enter your email address" required />
-            <button type="submit" class="form__button">Send</button>
-        </form>
-    </div>
-    <div class="notice">
-        <input type="checkbox">
-        <span class="notice__copy">I agree to my email address being stored and uses to recieve our newsletter.</span>
-    </div>
+    <p class="subscribe__copy">Complete the form to find out about our launch before everybody else.</p>
+    <button id="formular">Click here</button>
 </div>
 </div>
+
 
 <div class="footer">
     <p>&copy KONSAV @2024</p>
 </div>
 
-<script src="js.js"></script>
+<script src="js/js.js"></script>
 </body>
 </html>
