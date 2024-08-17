@@ -414,7 +414,7 @@ body {
     .video, .video video {
         height: 100em;
         background-color: black;
-        display: block;
+        display: block!important;
     }
 
     .info {
