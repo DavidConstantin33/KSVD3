@@ -415,6 +415,7 @@ body {
         height: 100em;
         background-color: black;
         display: block!important;
+        pointer-events: none!important;
     }
 
     .info {
