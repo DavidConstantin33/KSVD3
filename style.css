@@ -13,7 +13,7 @@
     font-style: normal;
 }
 
-html, body { height: 100%; margin: 0; }
+html, body { height: 100%; margin: 0; background-color: white!important; }
 
 .slider, .slider .imgs {
     width: 35rem;
@@ -412,19 +412,20 @@ body {
     }
 
     .video, .video video {
-        height: 100em;
+        height: auto!important;
         background-color: black;
         display: block!important;
         pointer-events: none!important;
     }
 
-    source {
-        pointer-events: none!important;
-    }
-
-    #myVideo {
+    #vid {
         pointer-events: none;
         user-select: none;
+        height: auto !important;
+    }
+
+    source {
+        pointer-events: none!important;
     }
 
     .info {
@@ -434,6 +435,7 @@ body {
 
     #heading {
         font-size: 2em!important;
+        padding: 24px!important;
     }
 
     .info--buttons {
@@ -443,13 +445,9 @@ body {
         box-shadow:rgba(0, 0, 0, 0.56) 0 22px 70px 4px ;
     }
 
+
     .info button {
         font-size: 12px;
-    }
-
-
-    .info button:after {
-        font-size: 1.3em;
     }
 
     .subscribe {

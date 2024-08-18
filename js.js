@@ -206,7 +206,7 @@ function updateVideoSource() {
     const videoSource = document.getElementById('vidSource');
 
     if (window.innerWidth <= 900) {
-        videoSource.src = 'vid.mp4';
+        videoSource.src = 'ksvvidmob.mp4';
     } else {
         videoSource.src = 'vid3.mp4';
     }
