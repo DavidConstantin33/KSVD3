@@ -79,7 +79,8 @@ const sliders = document.querySelectorAll(".slider");
         const title = document.getElementById('title');
         const scrollY = window.scrollY || window.pageYOffset;
         const windowHeight = window.innerHeight;
-
+        const section = document.getElementById('infoSection');
+        const sectionPosition = section.getBoundingClientRect();
 
         const maxScroll = windowHeight * 2;
 
@@ -94,7 +95,7 @@ const sliders = document.querySelectorAll(".slider");
         header.style.height = headerHeight + 'vh';
         title.style.fontSize = titleFontSize + 'em';
 
-        if (scrollY > maxScroll) {
+        if (scrollY > maxScroll || window.position === sectionPosition.top) {
             header.style.height = '10vh';
             title.style.fontSize = '2em';
         }
@@ -115,7 +116,8 @@ const sliders = document.querySelectorAll(".slider");
          const title = document.getElementById('title');
          const scrollY = window.scrollY || window.pageYOffset;
          const windowHeight = window.innerHeight;
-
+         const section = document.getElementById('infoSection');
+         const sectionPosition = section.getBoundingClientRect();
 
          if (window.screenY === 0) {
              title.fontSize = '1em';
@@ -131,12 +133,10 @@ const sliders = document.querySelectorAll(".slider");
          header.style.height = headerHeight + 'vh';
          title.style.fontSize = titleFontSize + 'em';
 
-         if (scrollY > maxScroll) {
+         if (scrollY > maxScroll || window.position === sectionPosition.top) {
              header.style.height = '10vh';
              title.style.fontSize = '1.3em';
          }
-
-
 
          if (header.style.height >= '40%') {
              header.style.opacity = '0.2';
@@ -201,35 +201,24 @@ document.getElementById('title').addEventListener('click', function() {
     });
 });
 
-function updateVideoSource() {
-    const video = document.getElementById('vid');
-    const videoSource = document.getElementById('vidSource');
+function updateImgSource() {
+    const videoDiv = document.getElementById('video');
+    const imgSource = document.getElementById('gif');
 
     if (window.innerWidth <= 900) {
-        videoSource.src = 'ksvvidmob.mp4';
+        imgSource.src = 'ksvvidmob.gif';
     } else {
-        videoSource.src = 'vid3.mp4';
+        imgSource.src = 'ksvviddesk.gif';
     }
-
-    video.load();
 }
 
 
-updateVideoSource();
+updateImgSource();
 
-window.addEventListener('resize', updateVideoSource);
+window.addEventListener('resize', updateImgSource);
 
 const btnform = document.getElementById('formular');
 btnform.addEventListener('click', function (e) {
     e.preventDefault();
     window.location.href = 'https://forms.gle/zUqTXVAX1hahzeHr9';
 })
-
-document.addEventListener('DOMContentLoaded', function() {
-    const videoElement = document.getElementById('vid');
-
-    if (window.innerWidth <= 767) { // Check if the device width is 767px or less
-        videoElement.removeAttribute('controls'); // Remove controls on mobile
-        videoElement.style.pointerEvents = 'none'; // Disable interaction
-    }
-});

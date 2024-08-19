@@ -144,18 +144,19 @@ body {
     box-shadow: rgb(38, 57, 77) 0 20px 30px -10px;
 }
 
-.video {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 5em;
+.video {display: flex;align-items: center;justify-content: center;
+    margin-top: 10em;
     width: 100%;
 }
 
-.video video {
-    width: 100%;
-}
+/*.video video {*/
+/*    width: 100%;*/
+/*}*/
 
+#gif {
+    height: 120vh;
+    width: 100vw;
+}
 
 
 .info {
@@ -164,7 +165,7 @@ body {
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 6em;
+    margin-top: 10em;
     margin-bottom: 2em;
     padding: 2em;
     gap: 1em;
@@ -411,17 +412,22 @@ body {
         font-size: 1.2em;
     }
 
-    .video, .video video {
-        height: auto!important;
-        background-color: black;
-        display: block!important;
-        pointer-events: none!important;
-    }
+    /*.video, .video video {*/
+    /*    height: auto!important;*/
+    /*    background-color: black;*/
+    /*    display: block!important;*/
+    /*    pointer-events: none!important;*/
+    /*}*/
 
-    #vid {
-        pointer-events: none;
-        user-select: none;
-        height: auto !important;
+    /*#vid {*/
+    /*    pointer-events: none;*/
+    /*    user-select: none;*/
+    /*    height: auto !important;*/
+    /*}*/
+
+    #gif {
+        width: 100vw;
+        height: 120vh;
     }
 
     source {
@@ -441,13 +447,25 @@ body {
     .info--buttons {
         display: flex;
         flex-direction: row;
-        border: 1px solid black;
+        border: none;
         box-shadow:rgba(0, 0, 0, 0.56) 0 22px 70px 4px ;
     }
 
-
     .info button {
         font-size: 12px;
+    }
+
+    .info-buttons button:hover::before {
+        width: 12px!important;
+    }
+
+    .info-buttons button::after {
+        font-size: 12px!important;
+        width: 12px !important;
+    }
+
+    .info-buttons button:hover::after {
+        height: inherit !important;
     }
 
     .subscribe {
