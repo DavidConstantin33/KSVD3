@@ -7,6 +7,18 @@
     font-style: normal;
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        background-color: white !important;
+    }
+}
+
+@supports (-webkit-touch-callout: none) and (not (-moz-appearance: none)) {
+    body {
+        background-color: white !important;
+    }
+}
+
 .roboto-regular {
     font-family: "Roboto", sans-serif;
     font-weight: 400;

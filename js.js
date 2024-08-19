@@ -1,3 +1,7 @@
+if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    document.body.style.backgroundColor = "white";
+}
+
 const sliders = document.querySelectorAll(".slider");
 
     const interval = 2800;
